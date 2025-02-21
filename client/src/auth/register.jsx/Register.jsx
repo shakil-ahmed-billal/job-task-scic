@@ -10,7 +10,7 @@ import { Link, useNavigate } from 'react-router-dom';
 
 const Register = () => {
 
-    const { user , signInPopup } = useAuth()
+    const {  signInPopup } = useAuth()
     const navigate = useNavigate()
 
     const {
