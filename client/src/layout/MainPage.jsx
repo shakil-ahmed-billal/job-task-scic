@@ -1,19 +1,18 @@
 
-import Header from '../components/header/Header'
-import Footer from '../components/footer/Footer'
 import { Outlet } from 'react-router-dom';
+import Header from '../components/header/Header';
 
 const MainPage = () => {
     return (
         <div className='bg-[#f0f3f8]'>
             <header>
-                <Header/>
+                <Header />
             </header>
             <main className='min-h-screen'>
-                <Outlet/>
+                <Outlet />
             </main>
             <footer>
-                <Footer/>
+                {/* <Footer/> */}
             </footer>
         </div>
     )
