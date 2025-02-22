@@ -6,7 +6,7 @@ const morgan = require("morgan");
 const connectDB = require("./config/db");
 
 const app = express();
-const port = process.env.PORT || 6000;
+const port = process.env.PORT || 5000;
 
 // use middleware
 app.use(cors());
@@ -18,6 +18,13 @@ connectDB();
 
 // routes
 app.use("/api", require("./routes/userRoutes"));
+app.use("/api", require("./routes/taskRoutes"));
+
+
+// home route
+app.get("/", (req, res) => {
+  res.send("Server is running");
+});
 
 app.listen(port, () => {
   console.log(`Server is running on port: ${port}`);
