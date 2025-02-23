@@ -104,3 +104,20 @@ body{
     @apply bg-background text-foreground;
     }
 }
+
+/* Ensures items remain draggable */
+.draggable-item {
+  user-select: none;
+  padding: 8px;
+  margin-bottom: 8px;
+  background-color: white;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.droppable-area {
+  background-color: #f7f7f7;
+  padding: 10px;
+  min-height: 300px;
+  border-radius: 5px;
+}

@@ -60,11 +60,12 @@ const AuthProvider = ({ children }) => {
             setUser(currentUser)
 
             const userInfo = {
-                displayName: currentUser?.displayName,
-                email: currentUser?.email
+                name: currentUser?.displayName,
+                email: currentUser?.email,
+                photoURL: currentUser?.photoURL
             }
             if (currentUser?.email) {
-                const { data } = await axiosPubLic.post('/users', userInfo)
+                const { data } = await axiosPubLic.post('/api/user', userInfo)
                 console.log(data);
 
             }

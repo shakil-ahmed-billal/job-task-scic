@@ -1,91 +1,95 @@
-<<<<<<< HEAD
-# Hiublue Frontend Recruitment
+# 🚀 Drag and Drop Task Management Website
 
-![Next.js](https://img.shields.io/badge/Next.js-15.0.0-blue)
-![React](https://img.shields.io/badge/React-19.0.0-blue)
-![TypeScript](https://img.shields.io/badge/TypeScript-Latest-blue)
+## 🌟 Overview
+This project is a full-stack **drag and drop task management website**, built with a **React-based frontend** and an **Express.js-based backend**. The website allows users to manage tasks efficiently with an intuitive drag-and-drop interface.
 
-## Overview
+---
 
-This is a frontend recruitment project for Hiublue, built using Next.js and React. It incorporates Material UI, React Hook Form, and other modern web development tools.
+## ✨ Features
+✅ **User Authentication** (Firebase Authentication)  
+✅ **Smooth Drag & Drop** (react-beautiful-dnd, react-dnd)  
+✅ **Real-Time Database Updates** (MongoDB & Mongoose)  
+✅ **RESTful API** (Express.js)  
+✅ **Modern UI Components** (Tailwind CSS & Radix UI)  
+✅ **Instant Notifications** (react-hot-toast & SweetAlert2)  
 
-## Features
+---
 
-- Built with **Next.js 15** and **React 19**
-- UI components powered by **Material UI**
-- Form handling with **React Hook Form** and validation via **Yup**
-- Charts and data visualization using **ApexCharts**
-- State management with **Lodash** and **Day.js** for date handling
+## 🛠️ Technologies Used
+### 🖥️ Server (Backend)
+- 🚀 Node.js
+- ⚡ Express.js
+- 🗄️ MongoDB & Mongoose
+- 🔐 bcrypt (for password hashing)
+- 🌎 dotenv (for environment variables)
+- 🔄 cors (for cross-origin requests)
+- 📜 Morgan (for logging)
 
-## Prerequisites
+### 💻 Client (Frontend)
+- ⚛️ React.js
+- ⚡ Vite (for fast development)
+- 🎨 Tailwind CSS
+- 🔥 Firebase (for authentication and hosting)
+- 🛤️ React Router
+- ✅ React Hook Form & Zod (for form validation)
+- 🎭 Radix UI (for UI components)
+- 🔄 Axios (for API requests)
+- 🖱️ React DnD & React Beautiful DnD (for drag-and-drop functionality)
 
-Ensure you have the following installed:
+---
 
-- [Node.js](https://nodejs.org/) (Recommended: v18+)
-- [pnpm](https://pnpm.io/) (Package Manager)
+## ⚙️ Installation
+### 🔧 Prerequisites
+Ensure **Node.js** and **npm** are installed.
 
-## Environment Variables
+### 🖥️ Backend Setup
+1. Navigate to the `server` folder:
+   ```sh
+   cd server
+   ```
+2. Install dependencies:
+   ```sh
+   npm install
+   ```
+3. Create a `.env` file and add necessary environment variables:
+   ```sh
+   MONGO_URI=your_mongodb_connection_string
+   ```
+4. Start the development server:
+   ```sh
+   npm run dev
+   ```
 
-Create a `.env.local` file in the root directory and add the following:
+### 💻 Frontend Setup
+1. Navigate to the `client` folder:
+   ```sh
+   cd client
+   ```
+2. Install dependencies:
+   ```sh
+   npm install
+   ```
+3. Start the development server:
+   ```sh
+   npm run dev
+   ```
 
-```env
-NEXT_LIVE_URL=http://localhost:3000
-NEXT_PUBLIC_API_URL=https://dummy-1.hiublue.com
-```
+---
 
-## Installation
+## 🎯 Usage
+1. **Register/Login** to access the dashboard.
+2. **Create tasks** and organize them in different lists.
+3. **Drag & drop** tasks to update their status.
+4. **Logout** when finished.
 
-Clone the repository and install dependencies:
+---
 
-```sh
-git clone https://github.com/shakil-ahmed-billal/hiublue-frontend-recruitment-starter.git
-cd hiublue-frontend-recruitment
-pnpm install
-```
+## 📜 License
+This project is licensed under the **ISC License**.
 
-## Running the Application
+---
 
-To start the development server:
+## 👨‍💻 Author
+**Shakil Ahmed**  
+Happy coding! 🚀
 
-```sh
-pnpm dev
-```
-
-To build the application for production:
-
-```sh
-pnpm build
-```
-
-To start the production server:
-
-```sh
-pnpm start
-```
-
-## Linting
-
-Run ESLint to check for code quality:
-
-```sh
-pnpm lint
-```
-
-## Testing
-
-Currently, this project does not include tests, but you can set up Jest or Cypress as needed.
-
-## Contribution
-
-1. Fork the repository
-2. Create a new branch (`feature/your-feature`)
-3. Commit your changes
-4. Push to your branch and create a PR
-
-## License
-
-This project is private and not licensed for public use.
-
-=======
-hi
->>>>>>> 3aa3c2b6a5febb861bf8d4ef3e23f09078c1383e
