@@ -54,9 +54,9 @@ const Home = () => {
         const { data } = await axiosPublic.post("/api/tasks", {
           title: taskInput,
           category,
-          email: user.email,
+          email: user ? user.email : "test@gmail.com",
         });
-        if (data.insertedId) {
+        if (data) {
           fetchTasks();
           Swal.fire({
             title: 'Task Added!',
