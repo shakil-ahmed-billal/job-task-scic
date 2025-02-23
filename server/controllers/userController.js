@@ -1,25 +1,24 @@
 const User = require("../models/userModels");
 
-
 const saveUser = async (req, res) => {
   try {
-    const { name, email , photoURL} = req.body;
+    const { name, email, photoURL } = req.body;
+    const findUser = await User.findOne({ email: email });
 
-    const findUser = await User.findOne({email: email});
     if (findUser) {
-      return res.status(400).json({ message: "User already exists" });
+      return res.status(200).json({ message: "User already exists" });
     }
 
-    const user = await User.create({ name, email , photoURL});
+    const user = await User.create({ name, email, photoURL });
 
     if (!user) {
       return res.status(400).json({ message: "User not created" });
     } else {
-      return res.status(200).send({ 
+      return res.status(200).send({
         message: "User created successfully",
         id: user._id,
         name: user.name,
-        email: user.email
+        email: user.email,
       });
     }
   } catch (error) {
@@ -43,4 +42,4 @@ const findUser = async (req, res) => {
   }
 };
 
-module.exports = { saveUser , findUser };
+module.exports = { saveUser, findUser };

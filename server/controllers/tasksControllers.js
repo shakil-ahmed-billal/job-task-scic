@@ -26,4 +26,38 @@ const saveTask = async (req, res) => {
   }
 };
 
-module.exports = { saveTask };
+const getTasks = async (req, res) => {
+  try {
+    const tasks = await Tasks.find({});
+    if (!tasks) {
+      return res.status(400).json({ message: "Tasks not found" });
+    }
+    return res.status(200).send(tasks);
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+const deleteTasks = async (req, res) => {
+  try {
+    const result = await Tasks.deleteOne({ _id: req.params.id });
+    if (!result) {
+      return res.status(400).json({ message: "Tasks not found" });
+    }
+    return res.status(200).send(result);
+  } catch (error) {
+    console.log(error);
+  }
+};
+const updateTasks = async (req, res) => {
+  try {
+    const result = await Tasks.updateOne({ _id: req.params.id }, req.body);
+    if (!result) {
+      return res.status(400).json({ message: "Tasks not found" });
+    }
+    return res.status(200).send(result);
+  } catch (error) {
+    console.log(error);
+  }
+};
+module.exports = { saveTask, getTasks, deleteTasks, updateTasks };
